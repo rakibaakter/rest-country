@@ -9,7 +9,7 @@ const Country = ({country}) => {
         setVisitStatus(!isVisited);
     }
     return (
-        <div className='box'>
+        <div className={isVisited ? 'visited box' : 'box'}>
             <img src={flags.png} alt="" />
             <div>
                 <h2>Common Name : {name.common}</h2>
@@ -21,7 +21,7 @@ const Country = ({country}) => {
             <div>
                 <button onClick={handleVisitStatus}>{isVisited ? 'Visited' : 'Wanna Go'}</button>
                 <span>
-                    {isVisited ? 'Already visit the country' : 'Wanna Visit the country'}
+                    {isVisited ? ' Already visit the country' : ' Wanna Visit the country'}
                 </span>
             </div>
 
